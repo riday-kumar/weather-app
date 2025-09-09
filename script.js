@@ -7,7 +7,7 @@ const userInputedCity = getId("getCity");
 document.getElementById("search-btn").addEventListener("click", () => {
   const userInput = userInputedCity.value.trim().toLowerCase();
   fetch(
-    `http://api.weatherapi.com/v1/current.json?key=3f7189117a24416da5d194645250809&q=${userInput}&aqi=yes`
+    `https://api.weatherapi.com/v1/current.json?key=3f7189117a24416da5d194645250809&q=${userInput}&aqi=yes`
   )
     .then((res) => res.json())
     .then((info) => showData(info));
@@ -15,7 +15,7 @@ document.getElementById("search-btn").addEventListener("click", () => {
 
 const byDefault = () => {
   fetch(
-    "http://api.weatherapi.com/v1/current.json?key=3f7189117a24416da5d194645250809&q=Dhaka&aqi=yes"
+    "https://api.weatherapi.com/v1/current.json?key=3f7189117a24416da5d194645250809&q=Dhaka&aqi=yes"
   )
     .then((res) => res.json())
     .then((data) => showData(data));
