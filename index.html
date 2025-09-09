@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- daisy ui and tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style/tailwind.config.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body class="font">
+    <div
+      class="bg-blue-100 bg-[url('./image/sunone.png')] bg-no-repeat bg-left-top h-[110dvh] xl:h-screen"
+    >
+      <div
+        class="h-[110dvh] xl:h-screen backdrop-blur-3xl flex justify-center items-center"
+      >
+        <div class="w-11/12 lg:w-[50%] bg-white/50 rounded-xl p-10">
+          <div class="text-center mb-5 space-y-5">
+            <h1 class="font-bold text-3xl">Today's Weather</h1>
+            <div class="join">
+              <input
+                id="getCity"
+                class="input join-item"
+                placeholder="Enter City Name"
+              />
+              <button
+                id="search-btn"
+                class="btn btn-outline btn-accent join-item"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+          <div
+            class="p-6 border-2 border-gray-200 rounded-xl w-11/12 lg:w-[50%] mx-auto"
+          >
+            <!-- city Name ,temp, img -->
+            <div id="three-info" class="">
+              <!-- here is dynamic temparature and other info showing -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
